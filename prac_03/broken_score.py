@@ -3,9 +3,11 @@ CP1404 - Practical
 Program to determine score status
 """
 
+from random import randint
+
 
 def main():
-    score = int(input("Enter score: "))
+    score = randomize_score()
     print(get_score(score))
 
 
@@ -21,6 +23,11 @@ def get_score(score):
 
     elif score < 50:
         return "Bad"
+
+
+def randomize_score():
+    score = randint(0, 100)
+    return score
 
 
 if __name__ == '__main__':
