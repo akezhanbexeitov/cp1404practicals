@@ -7,9 +7,9 @@ from random import randint
 
 
 def main():
-    score = randomize_score()
-    print(get_score(score))
-
+    number_of_scores = int(input("Enter number of scores: "))
+    score = randomize_score(number_of_scores)
+    print(score)
 
 def get_score(score):
     if score < 0 or score > 100:
@@ -25,9 +25,11 @@ def get_score(score):
         return "Bad"
 
 
-def randomize_score():
-    score = randint(0, 100)
-    return score
+def randomize_score(number_of_scores):
+    for i in range(number_of_scores):
+        score = randint(0, 100)
+        return score
+
 
 
 if __name__ == '__main__':
