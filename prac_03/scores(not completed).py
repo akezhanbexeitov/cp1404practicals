@@ -24,9 +24,9 @@ def get_score(score):
     elif score < 50:
         return "Bad"
 
-
+    
 def randomize_score(number_of_scores):
-    for i in range(number_of_scores):
+    for i in range(0, number_of_scores):
         score = randint(0, 100)
         return score
 
